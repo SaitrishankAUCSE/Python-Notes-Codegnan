@@ -281,24 +281,6 @@ print(l1 + l2)
 t1 = (1,2)
 t2 = (3,4)
 print(t1 + t2)
-'''
-#numbers
-num1 = 8
-num2 = 9
-print(num1 + num2)
 
-#characters or words
-ch1 = "Python is a "
-ch2 = "Language"
-print(ch1 + ch2)
-
-#list
-l1 = [1,2]
-l2 = [3,4]
-print(l1 + l2)
-
-#tuple
-t1 = (1,2)
-t2 = (3,4)
-print(t1 + t2)
+''
 

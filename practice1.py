@@ -1,0 +1,201 @@
+'''
+#print the area of an rectangle by length and breadth
+length = int(input("Enter length of the rectangle: "))
+breadth = int(input("Enter breadth of the rectangle :"))
+area = length * breadth
+print(f'The area of rectangle is {area}')
+--------------------------------------------------------------
+
+#Take input as name and age and greet them
+name = input("Enter name :")
+age = int(input("Enter age: "))
+print(f'Hi {name}, welcome to Python, glad to have people of {age} like you.')
+-----------------------------------------------------------------------------------
+
+#Even number
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print(f'The number {num} is Even')
+else:
+    print(f'The number {num} is Odd')
+-----------------------------------------------------------------------------------
+#print maximum and minimum number in the list  
+numbers = list(map(int, input("Enter elements in list :").split()))
+print(f'The maximum number in the list is {max(numbers)}')
+print(f'The minimum number in the list is {min(numbers)}')
+--------------------------------------------------------------------------------------
+
+#to check if the string is palindrome or not
+string = input("Enter the string: ")
+
+if string == string[::-1]:
+    print(f'The string is a palindrome')
+else:
+    print(f'The string is not a palindrome')
+-----------------------------------------------------------------------------------------------
+
+#To take days as input and count how many weeks , years
+days = int(input("Enter number of days : "))
+
+years = days // 365
+days = days % 365
+
+weeks = days // 7
+days = days % 7
+
+print("Years =", years)
+print("Weeks =", weeks)
+print("Days =", days)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+print(5 & 3)
+print(6 & 9)
+
+------------------------------------
+name = input("Enter your name: ")
+
+for i in range(1, 1516):
+    print(i, name)
+-------------------------------------
+string = input("Enter string: ")
+floats = float(string)
+print(floats)
+print(type(floats))
+---------------------------------------
+num = int(input("Enter a number:"))
+floats = float(num)
+print(num)
+print(type(floats))
+--------------------------------------
+char = input("Enter a character: ")
+ints = int(char)
+print(ints)
+print(type(ints))
+------------------------------------------------------
+for i in range(4):
+    for j in range(4):
+        print('*', end=' ')
+    print()
+    
+         (or)
+         
+for i in range(4):
+    print('****')
+--------------------------------------------------------- 
+num = int(input("Enter a number: "))
+
+if num % 1 == 0 and num % num == 0:
+    print(f'The number {num} is PRIME number')
+else:
+    print(f'The number {num} is not a PRIME number')
+if num ==  int(str(num)[::-1]):
+    print(f'The number is a palindrome')
+else:
+    print(f'The number is not a palindrome')
+
+if (num % 1 == 0 and num % num == 0) and  int(str(num)[::-1]):
+    print(f'The number {num} is both PRIME and PALINDROME number')
+-----------------------------------------------------------
+-----------------------------------------------------------
+date: 01-08-2026
+#print satrs
+
+num = 5
+
+for i in range(1, 6):
+    print('*' * num)
+    num -= 1
+for j in range(2,6):
+    print('*' * j)
+    j-=1
+
+------------------------------------------------------------
+
+for i in range(1, 6):
+    for j in range(1 , i+1):
+        print(j, end = ' ')
+    print()
+
+for i in range(4, 0, -1):
+    for j in range(1, i+1):
+        print(j, end = ' ')
+    print()
+--------------------------------------------------------------
+
+lists = ['A', 'B', 'C', 'D', 'E']
+
+for i in range(1, 6):
+    for j in range(i):
+        print(lists[j], end= ' ')
+    print()
+
+for i in range(4, 0, -1):
+    for j in range(i):
+        print(lists[j], end = ' ')
+    print()
+
+for i in range(1, 6):
+    for j in range(i):
+        print(lists[j], end= ' ')
+    print()
+
+for i in range(4, 0, -1):
+    for j in range(i):
+        print(lists[j], end= ' ')
+    print()
+---------------------------------------------------
+---------------------------------------------------
+lists = "A B C D E".split()
+
+for i in range(1, 6):
+    print(" ".join(lists[:i]))
+
+for j in range(4, 0, -1):
+    print(" ".join(lists[:j]))
+
+for i in range(1, 6):
+    print(" ".join(lists[:i]))
+
+for j in range(4, 0, -1):
+    print(" ".join(lists[:j]))
+
+for i in range(1, 6):
+    print(" ".join(lists[:i]))
+
+for j in range(4, 0, -1):
+    print(" ".join(lists[:j]))po
+----------------------------------------------------------------------------------------------------------------------
+
+    04th august 2026
+    ----------------
+    ----------------
+
+from day15 import *             
+print(add(5,6))
+print(mul(2,3))
+print(sub(10,5))
+print(div(10,2))
+print(pow(2,3))
+---------------------------------------------------------
+
+import day15
+
+day15.display("bannu")
+----------------------------------------------------------
+
+import random
+l = ['banana', 'apple', 'mango', 'grapes', 'orange', 'kiwi', 'watermelon', 'pineapple', 'papaya', 'pear']
+ans = l[random.randint(0, len(l)-1)]
+print(ans)
+'''
+from day15 import *
+print("Welcome to the Calculator made by Bannu!")
+num1 = int(input("Enter your first number: "))
+num2 = int(input("Enter your second number: "))
+print(pc.add(num1, num2))
+print(pc.sub(num1, num2))
+print(pc.mul(num1, num2))
+print(pc.div(num1,num2))
+print(pc.powers(num1,num2))

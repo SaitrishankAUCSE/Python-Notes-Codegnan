@@ -260,13 +260,98 @@ example:
 from itertools import combinations
 data = combinations([1,2,3], 2)
 print(list(data))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+06-08-2026
+-------------
+practice on modules
+----------------------
+import random
+import string
 
+print(string.ascii_letters)
+print(string.digits)
+print(string.punctuation)
+# ascii_letters -> this string module function can give alphabets from a-z and A-Z
+# digits --> string module function that can give numbers from 0-9
+#npunctuation --> this tring module function can give us special characters like (!@#$%^&*)
+------------------------------------------------------------------------------------------------
 
-'''
-import platform
-print(platform.python_version())
-print(platform.python_compiler())
-print(platform.machine())
-print(platform.processor())
-print(platform.release())
+#To generate password with mix of digits, special characters, letters:
+
+import random
+import string
+
+letters = string.ascii_letters
+digits = string.digits
+punctuation = string.punctuation
+
+all = letters + digits + punctuation
+password = ""
+for i in range(5):
+    password += random.choice(all)
+print(password)
+------------------------------------------------------------------------------------------------
+
+import random
+import string
+
+letters = string.ascii_letters
+digits = string.digits
+special = '@#*$'
+
+all = letters + digits + special
+password = ""
+for i in range(5):
+    password += random.choice(all)
+print(password)
+----------------------------------------------------------------------------------------------------------
+balance = 10000
+from datetime import datetime
+import sys
+now = datetime.now()
+
+while True:
+    print("----Welcome to SBI ATM---")
+    user_otp = int(input("\n1.Withdraw \n2.Deposit \n3.Check Balance"))
+    if user_otp == 1:
+        withdraw_money = int(input("Enter the money you want to withdraw: "))
+        if withdraw_money > balance:
+            balance -= withdraw_money
+            print(f'Remaining money {balance} {now.strftime("%H:%M %Y-%m-%d")}')
+        else:
+            print('insufficient money')
+    elif user_otp == 2:
+        deposit_money = int(input("Enter the money you want to depsoit: "))
+        balance += deposit_money
+        print(f'Money deposited successfully : {balance} {now.strftime("%H:%M %Y-%m-%d")}')
+    elif user_otp == 3:
+        print(f'Available balance: {balance} {{now.strftime("%H:%M %Y-%m-%d")}}')
+
+    elif user_otp == 4:
+        sys.exit()
+    else:
+        print("Incorrect choice")
+        print("Thanks for visiting the ATM")
+        sys.exit()
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+#Number Guessing game
+import random
+print("Hi Player! \nWelcome to Number Guessing Game")
+name = input("\nPlease enter your name: ")
+print(f'\nHi {name}, Lets start the Game!')
+score = 0
+
+randnumber = random.randint(1,5)
+print(randnumber)
+number = int(input("Enter a number between 1 to 5: "))
+if randnumber == number:
+    score += 10
+    print(f'Hurray! Your guess was correct!!! \nYour score is {score}')
+    
+if randnumber != number:
+    score -= 2
+    print(f'OOPS! {name}, Your guess was wrong \nBetter luck next time!!!')
+    
