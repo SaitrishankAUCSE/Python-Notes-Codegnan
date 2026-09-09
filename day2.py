@@ -1,6 +1,6 @@
 '''
 #student marks manager
-
+----------------------------
 #take input of marks using loop, create a list to append marks into list
 marks = []
 for mark in range(3):
@@ -60,7 +60,8 @@ elif 25 <= bmi <= 29.9:
 elif bmi > 30:
     print(f'the person bmi is {bmi}, he has obesity')    
 
-
+#Even and odd number Seperator
+------------------------------------
 nums = [10,15,20,25,30,35]
 even = []
 odd = []
@@ -69,6 +70,16 @@ for num in nums:
         even.append(num)
     elif num % 2 != 0:
         odd.append(num)
+print(even)
+print(odd)
+print(even[0:3], even[-1:--3])
+print(odd[0:3], odd[-1:-3])
+
+nums1 = nums.copy()
+print(nums1)
+nums = nums.clear()
+print(nums)
+print(nums1)
 
 
 
@@ -87,7 +98,8 @@ for i in range(user_input):
             print(f'{name} is into overweight category and BMI is {bmi}')
 
 
-'''
+#BMI value calculator
+-----------------------
 user_input = int(input("Enter the number of users to check: "))
 
 for i in range(user_input):
@@ -122,3 +134,55 @@ for i in range(user_input):
         print(f'{name} is in the overweight category and BMI is {bmi:.2f}')
     else:
         print(f'{name} is in the obese category and BMI is {bmi:.2f}')
+
+#Unique Name Manager
+--------------------------
+names = ["Asha", "Rahul", "Asha","John","Rahul"]
+print(names)
+names = set(names)
+print(names)
+names.add("Meera")
+names.update(["Arun","Priya"])
+print(names)
+if "John" in names:
+    names.remove("John")
+print(names)
+names.discard("David")
+print(names)
+for name in names:
+    print(name)
+
+'''
+#Course Student Comparison
+#-------------------------------
+
+python_students = {"Asha", "Rahul", "John", "Meera"}
+da_students = {"Rahul", "Meera", "Arun"}
+
+print("--- Union ---")
+for student in python_students | da_students:
+    print(student)
+
+print("\n--- Intersection ---")
+for student in python_students & da_students:
+    print(student)
+
+print("\n--- Symmetric Difference ---")
+for student in python_students ^ da_students:
+    print(student)
+
+print("\n--- Relationships ---")
+if da_students <= python_students:
+    print("DA is a subset of Python")
+else:
+    print("DA is NOT a subset of Python")
+
+if da_students >= python_students:
+    print("DA is a superset of Python")
+else:
+    print("DA is NOT a superset of Python")
+
+if da_students.isdisjoint(python_students):
+    print("Classes are disjoint")
+else:
+    print("Classes are NOT disjoint")
